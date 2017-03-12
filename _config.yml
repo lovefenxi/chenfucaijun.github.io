@@ -1,1 +1,29 @@
-theme: jekyll-theme-hacker
+title: 陈府才俊
+email: chenlei163mail@163.com
+description: > # this means to ignore newlines until "baseurl:"
+  Let's Do and Get!!!
+baseurl:  # the subpath of your site, e.g. /blog
+url:  # the base hostname & protocol for your site
+
+#
+## Build settings
+#markdown: kramdown
+#kramdown:
+#  parse_block_html: true
+#
+#gems:
+#  - jekyll-paginate
+#
+#
+#sass:
+#  style: compressed
+#
+
+include:
+  - _pages   #转换时强制包含某些文件、文件夹
+  - blog
+
+#分页数
+paginate: 2
+paginate_path: '/blog/:num'
+

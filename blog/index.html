@@ -1,0 +1,88 @@
+---
+layout: default
+title: blog
+---
+
+<!--每篇博客标题和简介显示-->
+<ul class="post-list">
+    {% for post in paginator.posts %}
+    <li>
+        <h2>
+            <a class="post-link" href="{{ site.baseurl|append: post.url}}">{{ post.title }}</a>
+        </h2>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <p class="description">
+            {% if post.description %}
+            {{ post.description | strip_html | strip_newlines | truncate: 250 }}
+            {% else %}
+            {{ post.content | strip_html | strip_newlines | truncate: 250 }}
+            {% endif %}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+<!--分页:包括每页页码、上一页、下一页-->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; 上一页</a>
+    {% else %}
+    <span>&laquo; 上一页</span>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <em>{{ page }}</em>
+    {% elsif page == 1 %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page
+        }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &raquo;</a>
+    {% else %}
+    <span>Next &raquo;</span>
+    {% endif %}
+</div>
+{% endif %}
+
+
+
+
+
+<!--<h1>这是博客主页</h1>-->
+
+<!--<h2>未分页的全部博客</h2>-->
+<!--{% for post in site.posts %}-->
+<!--<a href="{{ site.baseurl|append: post.url}}">{{post.title}}</a>-->
+<!--{% endfor %}-->
+
+
+<!--<h2>分页的博客,每页两个</h2>-->
+<!--{% for post in paginator.posts%}-->
+<!--<a href="{{ site.baseurl|append: post.url}}">{{post.title}}</a>-->
+<!--{% endfor %}-->
+
+<!--{% if paginator.total_pages>1 %}-->
+<!--{% if paginator.next_page_path %}-->
+<!--<a href="{{site.baseurl|append:paginator.next_page_path}}">下一页</a>-->
+<!--{% endif %}-->
+<!--{% if paginator.previous_page_path %}-->
+<!--<a href="{{site.baseurl|append:paginator.previous_page_path}}">上一页</a>-->
+<!--{% endif %}-->
+<!--{% endif %}-->
+
+
+
+
+
+
+
+
+
+
+
+
