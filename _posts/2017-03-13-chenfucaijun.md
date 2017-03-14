@@ -57,7 +57,9 @@ gem install jekyll
 source 'https://rubygems.org'
 gem 'github-pages', :group => :jekyll_plugins
 ```
+
 * _config.yml内容如下:
+
 ```
 title: 陈府才俊
 email: chenlei163mail@163.com
@@ -74,6 +76,7 @@ paginate: 2
 paginate_path: '/blog/:num'
 
 ```
+
 * 在添加完Gemfile后，要在当前工程路径下的CMD命令行中执行
 `bundler install`
 这步很重要，否则后面的步骤会报错！
@@ -81,6 +84,7 @@ paginate_path: '/blog/:num'
 
 # 6.CMD中进入到工程路径下执行jekyll命令
 ![Markdown](http://p1.bqimg.com/576036/1de4bb85689e7157.png)
+
 ```
 jekyll build
 jekyll serve
@@ -93,6 +97,7 @@ jekyll serve
 
 # 8.克隆到本地进行运行
 * 比如你可以直接克隆我的[Jekyll项目](https://github.com/chenfucaijun/chenfucaijun.github.io),从cmd中进入到项目目录中，
+
 ```
 bundler install
 jekyll build
