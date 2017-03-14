@@ -138,7 +138,7 @@ jekyll serve
 * 这些个目录结构的[作用](http://jekyll.com.cn/docs/structure/):
     * _config.yml:保存[配置](http://jekyll.com.cn/docs/configuration/)数据。
     * _includes:用来保存一些代码被其他文件重用。比如使用这个Liquid标签基本结构
-  {% include head.html %} 来把文件 _includes/head.html 包含进来。
+  `{% include head.html %}` 来把文件 _includes/head.html 包含进来。
     * _layouts:layouts:是包裹在文章外部的模板。布局可以在 [YAML头](http://jekyll.com.cn/docs/frontmatter/)信息中根据不同文章进行选择。
     * _posts: 这里放的就是你的博客文章了。必须要符合: YEAR-MONTH-DAY-title.MAKEUP这样的格式,后缀名是md等标记语言
     * _site:一旦 Jekyll 完成转换，就会将生成的页面放在这里（默认）。最好将这个目录放进你的 .gitignore 文件中。
