@@ -146,13 +146,13 @@ jekyll serve
 
 
 * [Liquid](https://help.shopify.com/themes/liquid/basics)的介绍
-    * Tag标签:用于执行命令或者处理格式: {% 命令 %}
+    * Tag标签:用于执行命令或者处理格式: `{% 命令 %}`
     ```
     {% if user.name == 'tom' %}
         Hey Elvis
     {% endif %}
     ```
-    * Objects标签:用于输出内容: {% 一对尖括号内一对百分号 %}
+    * Objects标签:用于输出内容: `{% 一对尖括号内一对百分号 %}`
         ```
         {{ site.title }} <!-- 输出: 网站的标题-->
         ```
