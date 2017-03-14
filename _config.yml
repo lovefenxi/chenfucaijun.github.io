@@ -11,8 +11,13 @@ url:  # the base hostname & protocol for your site
 #kramdown:
 #  parse_block_html: true
 #
-#gems:
-#  - jekyll-paginate
+
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+
+
 #
 #
 #sass:

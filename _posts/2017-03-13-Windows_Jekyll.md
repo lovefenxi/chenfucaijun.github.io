@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Windows下搭建Jekyll环境"
+title: "Windows下安装和使用Jekyll"
 date:   2017-03-11 09:59:21 +0800
 ---
 
-# [Windows下搭建Jeykll环境](http://jekyll-windows.juthilo.com/)
+# [Windows下安装和使用Jeykll](http://jekyll-windows.juthilo.com/)
 
 ## 1.安装Ruby
 > Jekyll3.0+要求Ruby2.0+
