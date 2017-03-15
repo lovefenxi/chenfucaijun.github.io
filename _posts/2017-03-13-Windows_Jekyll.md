@@ -53,9 +53,20 @@ gem install jekyll
 * 在c盘中新建一个Jekyll工程，如下图结构
 ![Markdown](http://i1.piimg.com/576036/6472e4d3d356ef65.png)
 * Gemfile内容如下：
+
 ```
 source 'https://rubygems.org'
-gem 'github-pages', :group => :jekyll_plugins
+# 安装github pages的所有相关插件:gem 'github-pages', :group => :jekyll_plugins
+
+ruby RUBY_VERSION
+
+# 分页依赖
+gem "jekyll-paginate"
+
+
+# 生成网站导航
+gem "jekyll-sitemap"
+
 ```
 
 * _config.yml内容如下:
